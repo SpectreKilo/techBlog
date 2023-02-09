@@ -1,6 +1,6 @@
 # Tech Blogs
 
-## | Git | JavaScript | MySQL | MySQL2 | Inquirer |
+## | Git | JavaScript | MySQL | MySQL2 | Sequelize | dotenv | express-handlebars | express-session | connect-session-sequelize | bcrypt |
 
 | Technology Used         | Resource URL           | 
 | ------------- |:-------------:|  

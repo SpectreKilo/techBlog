@@ -1,0 +1,37 @@
+<div class="divider"></div>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="card">
+                <div class="">
+                    <h1>Dashboard</h1>
+                    <h3>Welcome Back...</h3>
+                </div>
+                <div class="col">
+                    <div class="row">
+                        <h4> Your Discussions: </h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col blogList">
+            {{#each profile.blog_posts as |blog|}}
+            <p>{{ blog.topic }}</p>
+            <p>{{ blog.content }}</p>
+            <p>{{format_date blog.date_created }}</p>
+            <div class="row">
+                <div class="col">
+                    <a href="/dashboard/editPost/{{blog.id}}">
+                        <button class="editBtn btn waves-effect waves-light " data-id="{{blog.id}}">EDIT</button>
+                    </a>
+                </div>
+                <div lass="col">
+                    <button class="deleteBtn btn waves-effect waves-light " data-id="{{blog.id}}">DELETE</button>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</div>
+
+<script src="js/delete-blog-post.js"></script>

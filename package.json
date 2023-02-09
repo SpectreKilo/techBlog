@@ -17,5 +17,15 @@
   "bugs": {
     "url": "https://github.com/SpectreKilo/techBlog/issues"
   },
-  "homepage": "https://github.com/SpectreKilo/techBlog#readme"
+  "homepage": "https://github.com/SpectreKilo/techBlog#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-handlebars": "^6.0.7",
+    "express-session": "^1.17.3",
+    "mysql2": "^3.1.2",
+    "nodemon": "^2.0.20",
+    "sequelize": "^6.28.0"
+  }
 }

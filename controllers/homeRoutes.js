@@ -17,7 +17,6 @@ router.get('/', async (req, res) =>{
 
         res.render('homepage', {
             blogPosts,
-            //should we have the user logged in here?
             logged_in: req.session.logged_in
         });
     } catch (err) {
@@ -43,10 +42,7 @@ router.get('/topic/:id', withAuth, async (req, res) => {
 
             ],
         });
-        // const commentData = await Comment.findAll(req.params.id,
-        //     {
 
-        //     })
     const blogPosts = blogData.get({ plain:true });
         console.log(blogPosts)
     res.render('topic', {
@@ -69,9 +65,6 @@ router.get('/blogForm', withAuth, async(req,res) =>{
         logged_in: req.session.logged_in,
     });
 })
-
-//DO WE ADD A USER PROFILE PAGE ROUTE HERE?
-//make sure to use withAuth in this function
 
 router.get('/login', (req, res) => {
     if (req.session.logged_in) {
@@ -103,7 +96,6 @@ router.post('/logout', (req, res) => {
     console.log('logout route before if statement')
     if (req.session.logged_in) {
         req.session.destroy(() => {
-            //CAN I CREATE A LOGOUT MESSAGE HERE IN JSON???
             res.status(204).end();
         });
     } else {

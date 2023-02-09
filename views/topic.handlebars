@@ -1,5 +1,5 @@
 <div class="container">
-    <div class="card grey lighten-2">
+    <div class="card deep-orange lighten-4">
         <h2>{{blogPosts.topic}}
         </h2>
         <div class="card-content hoverable">
@@ -11,7 +11,7 @@
     </div>
     <div class="row"></div>
     {{#each blogPosts.comments as |comment|}}
-    <div class="card blue-grey lighten-4">
+    <div class="card deep-orange lighten-4">
         <div class="card-content hoverable">
             <p>{{comment.response}}</p>
             <p>date posted: {{format_date comment.date_created}}</p>
